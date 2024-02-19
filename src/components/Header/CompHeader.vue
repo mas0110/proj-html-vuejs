@@ -1,16 +1,19 @@
 <script>
  import CompUpdates from './CompUpdates.vue'
+ import CompLogo from './CompLogo.vue'
 
 export default{
     name:"CompHeader",
     components:{
-        CompUpdates
+        CompUpdates,
+        CompLogo
     }
 }
 </script>
 
 <template>
    <CompUpdates/>
+   <CompLogo/>
 </template>
 
 <style>
