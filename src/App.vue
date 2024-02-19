@@ -1,7 +1,7 @@
 <script>
-import CompHeader from'./components/CompHeader.vue'
-import compMain from'./components/compMain.vue'
-import CompFooter from'./components/CompFooter.vue'
+import CompHeader from'./components/header/CompHeader.vue'
+import compMain from'./components/Main/compMain.vue'
+import CompFooter from'./components/Footer/CompFooter.vue'
 
 
 export default{
@@ -21,5 +21,7 @@ export default{
 </template>
 
 <style>
-
+ul li{
+    list-style: none;
+}
 </style>
