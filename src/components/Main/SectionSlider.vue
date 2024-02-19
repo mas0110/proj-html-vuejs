@@ -37,6 +37,7 @@ export default{
 <style scoped lang="scss">
 .cont{
     background-color:#F3F3F3 ;
+    padding-bottom: 20px;
     div img{
         min-width: 320px;
         aspect-ratio: 4/3;
