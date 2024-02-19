@@ -1,12 +1,14 @@
 <script>
  import CompUpdates from './CompUpdates.vue'
  import CompLogo from './CompLogo.vue'
+ import CompItem from './CompItem.vue'
 
 export default{
     name:"CompHeader",
     components:{
         CompUpdates,
-        CompLogo
+        CompLogo,
+        CompItem
     }
 }
 </script>
@@ -14,10 +16,11 @@ export default{
 <template>
    <CompUpdates/>
    <CompLogo/>
+   <CompItem/>
 </template>
 
 <style>
-ul li svg{
+svg{
     height: 20px;
 }
 </style>
