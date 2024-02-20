@@ -3,32 +3,40 @@
 export default{
     name:"SectionCarousel",
     components:{
-    }
+    },
+    props:[
+    'propsImg',
+    'propsimgSmall',
+    'propsCategory1',
+    'propsCategory2',
+    'propsCategory3',
+    'propsTitle',
+    'propsData'
+    ]
 }
 </script>
 
 <template>
-<div class="container">
- <div class="cont col-3 d-flex justify-content-center">
-      <div class="card bg-light text-center" style="width: 20rem;">
+ <div class="cont col-4 d-flex justify-content-center m-0">
+      <div class="card bg-light text-center" style="width: 25rem;">
            <img :src="propsImg" alt="...">
-           <div class="card-body">
+           <div class="card-body mt-3">
                <h5 class="card-title">{{propsTitle}}</h5>
                <span class="opacity-50">{{propsData}}</span>
-               <div class="category">
-                  <a href="#">{{propsCategory1}}</a>
-                  <a href="#">{{ propsCategory2 }}</a>
-                  <a href="#">{{ propsCategory3 }}</a>
-               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, omnis.</p>
+               <button class="btn">Read More</button>
            </div>
       </div>
  </div>
-</div>
 </template>
 
 <style scoped lang="scss">
-    .container{
-        width: 80%;
-        margin: 0 auto;
-    }
+.card{
+height: 450px;
+div button{
+background-color: #BF1E2E;
+color: white;
+border-radius: 20px;
+}
+}
 </style>

@@ -23,6 +23,8 @@ export default {
         }
     },
     mounted(){
+        // funzioni per slider quattro immagini
+
         let scrollContainer = this.$refs.scrollContainer;
         let backBtn = this.$refs.prev-img;
         let nextBtn = this.$refs.next-img;
@@ -34,63 +36,132 @@ export default {
         });
     
         nextBtn.addEventListener("click", () => {
-        //   scrollContainer.style.scrollBehavior = "smooth";
+          scrollContainer.style.scrollBehavior = "smooth";
           scrollContainer.scrollLeft += 1100;
-          console.log("ciao")
         });
     
         backBtn.addEventListener("click", () => {
-        //   scrollContainer.style.scrollBehavior = "smooth";
+          scrollContainer.style.scrollBehavior = "smooth";
           scrollContainer.scrollLeft -= 1100;
-           console.log("ciao")
+        });
+
+
+
+        // funzioni per carosello a 3 immagini
+
+        let carouselContainer = this.$refs.carouselContainer;
+        let backImg = this.$refs.prev-btn;
+        let nextImg = this.$refs.next-btn;
+
+        carouselContainer.addEventListener("wheel", (ent) => {
+          ent.preventDefault();
+          carouselContainer.scrollLeft += evt.deltaY;
+          carouselContainer.style.scrollBehavior = "auto";
+        });
+        nextImg.addEventListener("click", () => {
+          carouselContainer.style.scrollBehavior = "smooth";
+          carouselContainer.scrollLeft += 1150;
+         });
+        backImg.addEventListener("click", () => {
+          carouselContainer.style.scrollBehavior = "smooth";
+          carouselContainer.scrollLeft -= 1150;
         });
     },
     methods: {
+    // slider 
     scrollNext() {
       let scrollContainer = this.$refs.scrollContainer;
-    //   scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.style.scrollBehavior = "smooth";
       scrollContainer.scrollLeft += 1100;
     },
     scrollBack() {
       let scrollContainer = this.$refs.scrollContainer;
-    //   scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.style.scrollBehavior = "smooth";
       scrollContainer.scrollLeft -= 1100;
+    },
+
+    // carousel
+    playNext() {
+      let carouselContainer = this.$refs.carouselContainer;
+      carouselContainer.style.scrollBehavior = "smooth";
+      carouselContainer.scrollLeft += 1150;
+    },
+    playBack() {
+      let carouselContainer = this.$refs.carouselContainer;
+      carouselContainer.style.scrollBehavior = "smooth";
+      carouselContainer.scrollLeft -= 1150;
     }
   }
-};
+}
 </script>
 
 <template>
-<div class="thumbs">
-<button id="prev-img" ref="backBtn" @click="scrollBack">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - 
-https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 
-12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
-</button>
-<div class="row" ref="scrollContainer">
-    <SectionSlider 
-    v-for="(element, index) in store.content"
-    :key="index"
-    :propsImg= "element.img"
-    :propsimgSmall= "element.imgSmall"
-    :propsCategory1= "element.category1"
-    :propsCategory2= "element.category2"
-    :propsCategory3= "element.category3"
-    :propsTitle= "element.title"
-    :propsData="element.data"
-    />
-</div> 
-<button id="next-img" ref="nextBtn" @click="scrollNext">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
-</button>
-</div>
+    <div class="thumbs">
+    <button id="prev-img" ref="backBtn" @click="scrollBack">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - 
+    https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 
+    12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+    </button>
+    <div class="row" ref="scrollContainer">
+        <SectionSlider 
+        v-for="(element, index) in store.content"
+        :key="index"
+        :propsImg= "element.img"
+        :propsimgSmall= "element.imgSmall"
+        :propsCategory1= "element.category1"
+        :propsCategory2= "element.category2"
+        :propsCategory3= "element.category3"
+        :propsTitle= "element.title"
+        :propsData="element.data"
+        />
+    </div> 
+    <button id="next-img" ref="nextBtn" @click="scrollNext">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://    fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3     0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+    </button>
+    </div>
+
+
     <SectionGrid />
     <SectionCategory/>
     <SectionBanner/>
-    <SectionCarousel/>
+
+
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <h3>FEATURED POSTS</h3>
+            <div>
+                <button id="prev-btn" ref="backImg" @click="playBack">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License -
+                https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 
+                12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+                </button>
+                <button id="next-btn" ref="nextImg" @click="playNext">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - 
+                    https://
+                    fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 
+                    0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="row riga" ref="carouselContainer">
+            <SectionCarousel
+             v-for="(element, index) in store.content"
+             :key="index"
+             :propsImg= "element.img"
+             :propsimgSmall= "element.imgSmall"
+             :propsCategory1= "element.category1"
+             :propsCategory2= "element.category2"
+             :propsCategory3= "element.category3"
+             :propsTitle= "element.title"
+             :propsData="element.data"/>
+        </div>
+    </div>
 </template>
 
 <style scoped lang="scss">
+.container{
+margin: 0 auto;
+width: 80%;}
 .row{
 flex-wrap: nowrap;
 position: relative;
@@ -115,10 +186,23 @@ fill:red;
 }
 
 #prev-img{
-left: 20px;
+left: 35px;
 z-index: 1;
 }
 
 #next-img{
-right: 20px;}
+right: 15px;}
+
+#prev-btn, #next-btn{
+background-color: white;
+border: 0;
+height: 30px;
+width: 30px;
+border-radius: 50%;
+background-color: black;
+margin-left: 10px;
+svg{
+fill:white;
+}
+}
 </style>
