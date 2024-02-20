@@ -12,8 +12,6 @@ export default{
     <div class="main-video">
         <iframe width="650" height="415" src="https://www.youtube.com/embed/kvqSDezN1S4?si=_VpJxUp96HghpKtv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
         </iframe>
-        <iframe src="https://www.youtube.com/embed/kvqSDezN1S4?si=_VpJxUp96HghpKtv" autoplay;>ciao</iframe>
-        <a href="https://www.youtube.com/embed/kvqSDezN1S4?si=_VpJxUp96HghpKtv">link</a>
     </div>
     <div class="list-video">
         <div>

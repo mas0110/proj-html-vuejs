@@ -5,6 +5,7 @@ import SectionCategory from './SectionCategory.vue'
 import SectionBanner from './SectionBanner.vue'
 import SectionCarousel from './SectionCarousel.vue'
 import SectionPlayer from './SectionPlayer.vue'
+import SectionBox from './SectionBox.vue'
 
 
 import { store } from '../../store'
@@ -18,6 +19,7 @@ export default {
         SectionBanner,
         SectionCarousel,
         SectionPlayer,
+        SectionBox,
     },
     data() {
         return {
@@ -158,8 +160,9 @@ export default {
              :propsData="element.data"/>
         </div>
     </div>
-    <SectionPlayer/>
-    <div>ciao quello nuovo</div>
+    <!-- <SectionPlayer/> -->
+    <SectionBox/>
+    
 </template>
 
 <style scoped lang="scss">
