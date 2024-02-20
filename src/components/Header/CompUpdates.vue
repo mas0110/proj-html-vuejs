@@ -46,7 +46,7 @@ export default{
 </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 .cont{
     background-color:#BF1E2E;
 }

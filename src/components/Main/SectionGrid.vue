@@ -128,7 +128,7 @@ filter: brightness(0.7);
 }
 
 .main {
-    height: 400px;
+    height: 410px;
     aspect-ratio: 4/3;
 }
 </style>

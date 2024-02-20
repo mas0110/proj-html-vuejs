@@ -18,7 +18,7 @@ export default{
 </div>
 </template>
 
-<style>
+<style scoped>
     .container{
         width: 80%;
         margin: 0 auto;

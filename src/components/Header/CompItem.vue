@@ -59,7 +59,7 @@ export default{
    </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 ul li svg{
     height: 15px;
 }
