@@ -73,5 +73,10 @@ svg{
         
     }
 }
-
+.icon li:hover{
+background-color:#4F514C ;
+svg{
+fill: white;
+}
+}
 </style>

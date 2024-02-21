@@ -189,7 +189,7 @@ height: 30px;
 width: 30px;
 border-radius: 50%;
 position: absolute;
-top: 50%;
+top: 45%;
 transform: translate(-50%);
 svg{
 fill:red;
@@ -215,5 +215,12 @@ margin-left: 10px;
 svg{
 fill:white;
 }
+}
+
+#prev-img:hover, #next-img:hover,
+#prev-btn:hover, #next-btn:hover{
+background-color: red;
+svg{
+fill:white}
 }
 </style>
