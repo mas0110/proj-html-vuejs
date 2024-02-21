@@ -160,7 +160,7 @@ export default {
              :propsData="element.data"/>
         </div>
     </div>
-    <!-- <SectionPlayer/> -->
+    <SectionPlayer/>
     <SectionBox/>
     
 </template>
