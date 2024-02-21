@@ -168,6 +168,9 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.container .row{
+height: 500px;
+}
 main{
 padding-top: 160px;}
 .container{
@@ -176,7 +179,7 @@ width: 80%;}
 .row{
 flex-wrap: nowrap;
 position: relative;
-overflow-x: scroll;
+overflow: scroll;
 }
 .row::-webkit-scrollbar{
 display: none;

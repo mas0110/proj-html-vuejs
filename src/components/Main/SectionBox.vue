@@ -19,7 +19,7 @@ export default{
      <div class="box">
      <figure>
          <img src="../../assets/img/success-story.webp" alt="">
-         <span>3 post</span>
+         <span>2 post</span>
      </figure>
      <h4>culture</h4>
  </div> <div class="box">
@@ -84,7 +84,7 @@ aspect-ratio: 1;
  display: none;
  position: absolute;
  top: 70%;
- left: 50%;
+ left: 35%;
  transform: translate(-50%, -50%);
  color: white;
  }
@@ -92,7 +92,7 @@ aspect-ratio: 1;
 .box h4{
 position: absolute;
 top: 50%;
-left: 50%;
+left: 35%;
 transform: translate(-50%, -50%);
 color: white;
 text-transform: uppercase;
