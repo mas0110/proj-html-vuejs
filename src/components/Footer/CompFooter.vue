@@ -10,7 +10,7 @@ export default{
 </script>
 
 <template>
-   <div class="bg">
+   <div class="bg" id="about">
         <div class="list-container">
             <ul>
                  <h5>get started</h5>

@@ -17,7 +17,7 @@ export default{
 </script>
 
 <template>
- <div class="cont col-4 d-flex justify-content-center m-0">
+ <div class="cont col-4 d-flex justify-content-center m-0" id="stories">
       <div class="card bg-light text-center" style="width: 25rem;">
            <img :src="propsImg" alt="...">
            <div class="card-body mt-3">

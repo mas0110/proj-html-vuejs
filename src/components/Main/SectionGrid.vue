@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-    <div class="container d-flex justify-content-center mt-5 gap-2">
+    <div class="container d-flex justify-content-center mt-5 gap-2" id="pages">
         <div>
             <div class="side card bg-light text-center" 
             style="width: 20rem; background-image: url(src/assets/img/anime-fashion.webp); background-size:cover;">

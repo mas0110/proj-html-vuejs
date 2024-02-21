@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-<div class="container mt-5">
+<div class="container mt-5" id="lifestyle">
     <div class="d-flex justify-content-between my-3">
         <h3>LIFESTYLE & STORIES</h3>
         <div>
