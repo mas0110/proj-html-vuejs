@@ -10,7 +10,7 @@ export default{
 
 <template>
 <div class="cont d-flex justify-content-around">
-    <div class="bg-secondary text-light d-flex align-items-center">
+    <div class="bg-secondary text-light d-flex gap-3 px-2 align-items-center">
      <span >NEWS UPDATES</span>
      <span>05:35 THE_</span>
     </div>
@@ -49,23 +49,27 @@ export default{
 <style scoped lang="scss">
 .cont{
     background-color:#BF1E2E;
+    height: 30px;
 }
 svg{
     fill:white;
 }
 .icon li{
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     background-color: white;
     border-radius: 50%;
     display: inline-block;
     position:relative;
+    padding: 10px;
     svg{
+        height: 15px;
         fill:red;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
         
     }
 }

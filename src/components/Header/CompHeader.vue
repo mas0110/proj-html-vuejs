@@ -14,13 +14,23 @@ export default{
 </script>
 
 <template>
-   <CompUpdates/>
-   <CompLogo/>
-   <CompItem/>
+    <header>
+       <CompUpdates/>
+       <CompLogo/>
+       <CompItem/>
+    </header>
 </template>
 
 <style>
 svg{
     height: 20px;
+}
+header{
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 3;
+background-color: white;
 }
 </style>

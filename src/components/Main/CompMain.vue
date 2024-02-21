@@ -100,6 +100,7 @@ export default {
 </script>
 
 <template>
+<main>
     <div class="thumbs">
     <button id="prev-img" ref="backBtn" @click="scrollBack">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - 
@@ -162,10 +163,13 @@ export default {
     </div>
     <SectionPlayer/>
     <SectionBox/>
+</main>
     
 </template>
 
 <style scoped lang="scss">
+main{
+padding-top: 160px;}
 .container{
 margin: 0 auto;
 width: 80%;}

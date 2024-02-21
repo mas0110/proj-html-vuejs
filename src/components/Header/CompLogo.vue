@@ -8,7 +8,7 @@ export default{
 </script>
 
 <template>
-<div class="container p-3">
+<div class="container py-2">
     <div>
         <figure class="d-flex justify-content-around">
             <img src="../../assets/img/anime-logo-300x89.webp" alt="white-logo">

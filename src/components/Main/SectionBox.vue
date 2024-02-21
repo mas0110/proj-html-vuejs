@@ -19,7 +19,7 @@ export default{
      <div class="box">
      <figure>
          <img src="../../assets/img/success-story.webp" alt="">
-         <span>4 post</span>
+         <span>3 post</span>
      </figure>
      <h4>culture</h4>
  </div> <div class="box">
@@ -31,19 +31,19 @@ export default{
  </div> <div class="box">
      <figure>
          <img src="../../assets/img/visit-france.webp" alt="">
-         <span>4 post</span>
+         <span>2 post</span>
      </figure>
      <h4>lifestyle</h4>
  </div> <div class="box">
      <figure>
          <img src="../../assets/img/travel-alone.webp" alt="">
-         <span>4 post</span>
+         <span>6 post</span>
      </figure>
      <h4>stories</h4>
  </div> <div class="box">
      <figure>
          <img src="../../assets/img/best-places.webp" alt="">
-         <span>4 post</span>
+         <span>3 post</span>
      </figure>
      <h4>travel</h4>
  </div>
@@ -58,7 +58,7 @@ border-radius: 5px;
  object-fit: cover;
 }
 
-figure::before {
+.box::before {
   content: '';
   position: absolute;
   top: 0;
@@ -68,10 +68,10 @@ figure::before {
   background-color: rgba(217, 3, 3, 0); 
   transition: background-color 0.3s ease;
 }
-figure:hover::before {
+.box:hover::before {
   background-color: rgba(217, 3, 3, 0.5); 
 }
-figure:hover span{
+.box:hover span{
 display: block;
 }
 
